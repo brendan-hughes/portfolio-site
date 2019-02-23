@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700" rel="stylesheet">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<title>Brendan Hughes | Web Developer | Toronto, CA </title>
+</head>
+<body>
+<div class="nav-container">
+	<nav>
+			<a href="#home">HOME</a>
+			<a href="#about-me">ABOUT ME</a>
+			<a href="#projects">PROJECTS</a>
+			<a href="#contact">CONTACT</a>
+	</nav>
+</div>
+<div class="content-area" id="home">
+	<div class="main-header">
+		<!-- I want this to animate -->
+		<h1>Hi, I'm Brendan</h1>
+		<h3 class="main-header-tagline">Full-Stack Web Developer</h3>
+		<h3 class="main-header-tagline">&lt;/&gt;</h3>
+	</div>
+	<!--I want it to become solid on hover and slide down when you click it and dissapear as you scroll-->
+	<a href="#about-me"><img class="header-arrow header-arrow-head" src="images/down-arrow.png"></a>
+</div>
+
+	<div class="content-area content-area-about-me">
+		<h1 id="about-me">ABOUT ME</h1>
+		<!-- Three Icons: Languages, Frameworks, Tools -->
+		<p>I graduated from <b>Ryerson University</b> with a <b>Bachelor of Commerce in Business Technology Management</b>. Since then, I have pursued my passion for Web by finding employment primarily in <em>eCommerce UX analysis.</em> Now, I'm looking to <span class="transition-span">transition</span> to a Web Developer position. Take a look at the skills I've gathered below.</p><hr>
+	<div class="item-container">
+		<div class="item">
+			<h3>Languages</h3>
+			<img src="images/code.png" id="languages-img">
+			<ul id="languages-list">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>Python</li>
+			</ul>
+		</div>
+		<div class="item">
+			<h3>Front-End</h3>
+
+			<img src="images/frameworks.png" id="frontend-img">
+			<ul id="frontend-list">
+				<li>React</li>
+				<li>React Native</li>
+				<li>Bootstrap</li>
+				<li>jQuery</li>
+			</ul>
+		</div>
+		
+		<div class="item">
+			<h3>Back-End</h3>
+			<img src="images/tools.png" id="backend-img">
+				<ul id="backend-list">
+				<li>node.js</li>
+				<li>Express</li>
+				<li>Mongo.db</li>
+				<li>Heroku</li>
+			</ul>
+		</div>
+		<div class="item">
+			<h3>Other</h3>
+			<img src="images/other.png" id="other-img">
+				<ul id="other-list">
+				<li>Project Management</li>
+				<li>Agile Methods</li>
+				<li>Retentive Learner</li>
+				<li>Excellent Communication</li>
+			</ul>
+		</div>
+	
+	</div>
+
+	<a href="#projects"><img class="header-arrow header-arrow-about" src="images/down-arrow.png"></a>
+	</div>
+	<div class="content-area content-area-projects section-breaker">
+		<h1 id="projects">PROJECTS</h1>
+		<!-- Three Icons: Projects with summaries and links to repos/live -->
+		<p>Part passion, part practice.<br>These projects illustrate my understanding of modern web technologies, and evidence my ability to leverage them creatively.</p><hr>
+		<div class="item-container">
+		<div class="item item-project">
+			<h3>Project 1</h3>
+			<img src="images/instagram.png" id="project1-img">
+		</div>
+		<div class="item item-project">
+			<h3>Project 2</h3>
+			<img src="images/food.png" id="project2-img">
+		</div>
+		<div class="item item-project">
+			<h3>Project 3</h3>
+			<img src="images/like.png" id="project3-img">
+		</div>
+	</div>
+	<div class="item-container">
+		<div class="item item-project-desc">
+		<p class="item-project-desc" id="project-desc">Hover over a project to learn more about it. Click to go to its repo.</p>
+	</div>
+	</div>
+
+	<div class="item-container">
+		<div class="item item-resume">
+			<a href="#contact"><img class="header-arrow header-arrow-projects" src="images/white-down-arrow.png"></a>
+		</div>
+
+	</div>
+	</div>
+	<div class="content-area content-area-contact">
+		<h1 id="contact">CONTACT</h1>
+		<p>I'm an open book! Please reach out if you have any questions, comments, or think I might be the right fit for a project. Thanks for your interest!</p>
+			<form class="content-area content-area-form" id="contact-form">
+				<label>Name</label>
+				<input type="text" placeholder="Name" required>
+				<label>Company</label>
+				<input type="text" placeholder="Company (Optional)">
+				<label>Email</label>
+				<input type="email" placeholder="Email Address" required>
+				<label>Message</label>
+				<textarea class="form-message" form="contact-form" maxlength="500" placeholder="Write your message here..." required></textarea>
+				<input type="submit" class="btn" value="Get In Touch" id="submit-btn">
+			</form>
+	</div>
+	<footer id="main-footer">
+		<a href="mailto:b.dalton.hughes@gmail.com"><img src="images/email_icon.png" class="footer-link footer-link-first"></a>
+		<a href="https://github.com/brendan-hughes?tab=repositories" target="_blank"><img src="images/github_icon.png" class="footer-link"></a>
+		<a href="https://www.linkedin.com/in/brendan-hughes-868812149/" target="_blank"><img src="images/linkedin_icon.png" class="footer-link"></a>
+	</footer>
+	<script src="snippets.js"></script>
+</body>
+</html>
