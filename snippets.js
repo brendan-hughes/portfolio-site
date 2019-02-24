@@ -1,7 +1,21 @@
-document.querySelector('#submit-btn').addEventListener('click',function(e){
-	e.preventDefault()
-	console.log("Success")
-})
+var popup = document.querySelector(".popup");
+var popupText = document.querySelector(".popup-text");
+var popupHeader = document.querySelector('.popup-header');
+var projectIcons = document.querySelectorAll(".item-project");
+console.log(projectIcons)
+
+
+var popupToggle = function () {
+	console.log("Toggled class")
+  popup.classList.toggle("show");
+	popupHeader.classList.toggle("show");
+	popupText.classList.toggle("show");
+};
+
+//Add Event Listeners to Project Icons//
+for (i=0;i<projectIcons.length;i++) {
+	projectIcons[i].addEventListener('click', popupToggle);
+}
 
 
 		$(document).ready(function(){
