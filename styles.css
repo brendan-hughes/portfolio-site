@@ -123,6 +123,7 @@ border-radius:70px;
 	opacity:1;
 	color:rgb(0,184,214);
 	transform:scale(1.2);
+	cursor:pointer;
 }
 
 
@@ -478,7 +479,7 @@ background:#fff;
 	height: 100vh;
 	background-size: repeat;
 	background-color: #f0f5f9;
-	background-image: radial-gradient(transparent 20%, #fff 55%), url("images/round.png");
+	background-image: radial-gradient(transparent 20%, #fff 55%), url("images/tiny-squares.png");
 }
 .content-area h1 {
 	padding-top: 8vh;
