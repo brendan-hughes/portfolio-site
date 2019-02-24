@@ -639,15 +639,16 @@ body > div.content-area.content-area-projects > div > div > p {
 		flex-direction:column;
 		width:70%;
 		font-size:12px;
-		height:60%;
+		height:70%;
 		justify-content:center;
 		align-content:space-around;
 		left:0;
 		right:0;
-		top:25%;
+		top:15%;
 		margin-right:auto;
 		margin-left:auto;
 		text-align:center;
+
 	}
 	.popup-header {
 		order:1;
