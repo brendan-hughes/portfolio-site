@@ -3,6 +3,8 @@ var popupText = document.querySelector(".popup-text");
 var popupHeader = document.querySelector('.popup-header');
 var projectIcons = document.querySelectorAll(".item-project");
 var popupBackground = document.querySelector(".popup-background");
+var popupSeeLive = document.querySelector(".popup-live");
+var popupImage = document.querySelector(".popup-image");
 var popupCloseBtn =document.querySelector(".popup-close");
 console.log(popupCloseBtn)
 
@@ -12,23 +14,17 @@ var popupToggle = function () {
 	popupHeader.classList.toggle("show");
 	popupText.classList.toggle("show");
 	popupCloseBtn.classList.toggle("show");
+	popupSeeLive.classList.toggle("show");
+	popupImage.classList.toggle("show");
 	//popupBackground.classList.toggle("greyed-out");
 };
 
-var popupClose = function () {
-	
-	popup.classList.toggle("show");
-	popupHeader.classList.toggle("show");
-	popupText.classList.toggle("show");
-	popupCloseBtn.classList.toggle("show");
-	console.log("Clicked")
-};
 
 //Add Event Listeners to Project Icons//
 for (i=0;i<projectIcons.length;i++) {
 	projectIcons[i].addEventListener('click', popupToggle);
 }
-popupCloseBtn.addEventListener('click',popupClose);
+popupCloseBtn.addEventListener('click',popupToggle);
 
 
 		$(document).ready(function(){

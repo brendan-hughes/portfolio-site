@@ -101,10 +101,11 @@ border-radius:70px;
 	vertical-align: middle;
 	font-size:15px;
 	color:grey;
-	transition:0.15s;
+	transition:0.2s;
 	position:absolute;
 	bottom:40px;
 	left: 80px;
+	opacity:0;
 }
 
 .popup-live:hover {
@@ -126,6 +127,7 @@ border-radius:70px;
 	z-index:2;
 	border-radius:20px;
 	transition:.2s;
+	opacity:0;
 }
 .popup-image:hover {
 	transform:scale(1.01);
@@ -153,12 +155,15 @@ border-radius:70px;
 .popup-header {
 	position:relative;
 	top:-40px;
+	opacity:0;
+	transition:.2s;
 }
 .popup-text {
 position:absolute;
 right:15px;
 top:70px;
-
+opacity:0;
+transition:.2s;
 width:250px;
 text-align:center;
 font-size:13px;
@@ -168,6 +173,7 @@ font-size:13px;
 
 .show {
   visibility: visible;
+	opacity:1;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
 }
