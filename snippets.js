@@ -21,11 +21,11 @@ var popupToggle = function () {
 
 //Animate Skill Lists
 var skillLists = document.querySelectorAll('.skill-list');
-	var list = skillLists[0];
-	var elementHeight = list.clientHeight;
-	document.addEventListener('scroll', animateLists);
+	var aboutMeTop = document.querySelector('div.content-area.content-area-about-me');
+	var elementHeight = aboutMeTop.clientHeight;
+	document.addEventListener('scroll', animateAboutMe);
 
-	function inViewLists() {
+	function inViewAbout() {
 	  // get window height
 	  var windowHeight = window.innerHeight;
 	  // get number of pixels that the document is scrolled
@@ -34,7 +34,7 @@ var skillLists = document.querySelectorAll('.skill-list');
 	  // get current scroll position (distance from the top of the page to the bottom of the current viewport)
 	  var scrollPosition = scrollY + windowHeight;
 	  // get element position (distance from the top of the page to the bottom of the element)
-	  var elementPosition = list.getBoundingClientRect().top + scrollY + elementHeight;
+	  var elementPosition = aboutMeTop.getBoundingClientRect().top + scrollY + elementHeight;
 
 	  // is scroll position greater than element position? (is element in view?)
 	  if (scrollPosition > elementPosition) {
@@ -44,13 +44,23 @@ var skillLists = document.querySelectorAll('.skill-list');
 	  return false;
 	}
 
-	function animateLists() {
+	function animateAboutMe() {
 	  // is element in view?
-	  if (inViewLists()) {
+	  if (inViewAbout()) {
 			for (i=0;i<skillLists.length;i++) {
 	      // element is in view, add class to element
-	      skillLists[i].classList.add('skill-list-visible');
-
+	      skillLists[i].classList.add('about-me-visible');
+			}
+			document.querySelector('.content-area-about-me h1').classList.add('about-me-visible');
+			document.querySelector('.content-area-about-me p').classList.add('about-me-visible');
+			document.querySelector('.content-area-about-me hr').classList.add('about-me-visible');
+			var skillHeaders = document.querySelectorAll('.skill-list-header')
+			for (i=0;i<skillHeaders.length;i++) {
+				skillHeaders[i].classList.add('about-me-visible');
+			}
+			var skillImg = document.querySelectorAll('.skill-img')
+			for (i=0;i<skillImg.length;i++) {
+				skillImg[i].classList.add('about-me-visible');
 			}
 	  }
 	}
