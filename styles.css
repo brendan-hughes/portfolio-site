@@ -478,7 +478,7 @@ background:#fff;
 	height: 100vh;
 	background-size: repeat;
 	background-color: #f0f5f9;
-	background-image: radial-gradient(transparent 20%, #fff 55%), url("images/folk-pattern.png");
+	background-image: radial-gradient(transparent 20%, #fff 55%), url("images/round.png");
 }
 .content-area h1 {
 	padding-top: 8vh;
