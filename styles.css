@@ -188,7 +188,7 @@ font-size:13px;
 .turn-blue {
 	background-color:transparent;
 	color:#A2AEBB;
-	
+
 	transition:0.3s;
 }
 .turn-blue:hover {
@@ -535,37 +535,18 @@ clip-path: polygon(0 8%, 100% 0, 100% 100%, 100% 94%, 100% 94%, 0 100%);
 
 }
 
-/*.btn {
-	text-decoration: none;
-	font-size: 1rem;
-	font-family: 'Ropa Sans', sans-serif;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: #FFFFFF;
-	border: transparent solid 3px;
-	background: #23B5D3;
-	padding: 10px 40px;
-	border-radius: 100px;
-	transition: 0.15s;
-	font-style: inherit;
-	animation: .5s ease-out moveInBottom 0.75s;
-	animation-fill-mode: backwards;
-	width: 225px;
-	position:relative;
-	bottom:35px;
-	cursor:pointer;
-}*/
 
 
 .btn {
 	text-decoration: none;
 	font-size: 1rem;
 	font-family: 'Ropa Sans', sans-serif;
+	font-weight:bold;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: #FFFFFF;
-	border: transparent solid 3px;
-	background: #23B5D3;
+	color: #23B5D3;
+	border: #23B5D3 solid 3px;
+	background: #FFFFFF;
 	padding: 10px 40px;
 	border-radius: 100px;
 	transition: 0.15s;
@@ -575,7 +556,7 @@ clip-path: polygon(0 8%, 100% 0, 100% 100%, 100% 94%, 100% 94%, 0 100%);
 	width: 225px;
 
 	position:relative;
-	bottom:35px;
+	bottom:30px;
 	cursor:pointer;
 }
 
