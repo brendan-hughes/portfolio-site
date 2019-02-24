@@ -108,7 +108,7 @@ var skillLists = document.querySelectorAll('.skill-list');
 					var links = document.querySelectorAll('nav a');
 					for (i=0;i<links.length;i++) {
 						links[i].classList.add('turn-blue');
-					
+
 					}
 				}
 					else {
