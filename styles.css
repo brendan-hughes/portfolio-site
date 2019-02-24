@@ -50,7 +50,7 @@ nav {
 	visibility: hidden;
 	position: fixed;
   cursor: pointer;
-	z-index: 1;
+	z-index: 200;
 	left:0;
 	right:0;
 	top:25%;
@@ -60,11 +60,20 @@ nav {
 	width:500px;
 	height:300px;
 
-background-color: #555;
+
+background-color: #00b8d6;
 border-radius:70px;
 }
 
+.popup-background {
+
+}
+
+.greyed-out {
+}
+
 .popup-close {
+	visibility:hidden;
 	background: white;
 	float:right;
 	border-radius: 1000px;
@@ -91,11 +100,7 @@ border-radius:70px;
   background-color: rgba(255,255,255,255,.5);
 }
 
-.greyed-out {
-	visibility: visible;
-	-webkit-animation: fadeIn 1s;
-	animation: fadeIn 1s;
-}
+
 
 .popup-live {
 	background: white;
@@ -161,6 +166,7 @@ border-radius:70px;
 	top:-40px;
 	opacity:0;
 	transition:.2s;
+	font-family: 'Lobster', cursive;
 }
 .popup-text {
 position:absolute;
@@ -174,6 +180,21 @@ font-size:13px;
 
 }
 
+.turn-transparent {
+	transition:0.3s;
+	background-color:transparent;
+}
+
+.turn-blue {
+	background-color:transparent;
+	color:#A2AEBB;
+	
+	transition:0.3s;
+}
+.turn-blue:hover {
+	color:#00b8d6;
+	transition:.15s;
+}
 
 .show {
   visibility: visible;
@@ -325,7 +346,7 @@ footer {
 	background: #1e2022;
 	text-align: center;
 	bottom: 0;
-	align-content;
+	transition:0.3s;
 }
 footer a {
 	color: #c9d6df;
@@ -370,7 +391,7 @@ footer a:focus, footer a:active {
 	align-items: center;
 }
 .content-area-about-me {
-	background: #fff;
+background:#fff;
 	background-position: repeat;
 }
 .content-area-projects {
@@ -429,29 +450,23 @@ Cadet Grey: #95A3B3;
 
 }
 
-#languages-list {
+.skill-list{
 	color:#A2AEBB;
+	opacity:0;
+}
+
+.skill-list-visible {
+	animation: fadeIn 2s ease-in;
 	opacity:1;
 }
-#frontend-list {
-	color:#A2AEBB;
-	opacity:1;
-}
-#backend-list {
-	color:#A2AEBB;
-	opacity:1;
-}
-#other-list {
-	color:#A2AEBB;
-	opacity:1;
-}
+
 .item-project {
 	width:25vw;
 	margin:auto;
 }
 
 .content-area-contact {
-	background: white; /*A2AEBB*/
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 68%,rgba(0,184,214,1) 100%);
 	padding-bottom:30px;
 }
 #home {
@@ -649,12 +664,14 @@ body > div.content-area.content-area-projects > div > div > p {
 		margin-left:auto;
 		text-align:center;
 
+
 	}
 	.popup-header {
 		order:1;
 		position:static;
 		display:flex;
 		margin:auto;
+
 	}
 	.popup-live {
 

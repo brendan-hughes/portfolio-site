@@ -6,7 +6,7 @@ var popupBackground = document.querySelector(".popup-background");
 var popupSeeLive = document.querySelector(".popup-live");
 var popupImage = document.querySelector(".popup-image");
 var popupCloseBtn =document.querySelector(".popup-close");
-console.log(popupCloseBtn)
+
 
 var popupToggle = function () {
 	console.log("Toggled class")
@@ -19,6 +19,106 @@ var popupToggle = function () {
 	//popupBackground.classList.toggle("greyed-out");
 };
 
+//Animate Skill Lists
+var skillLists = document.querySelectorAll('.skill-list');
+	var list = skillLists[0];
+	var elementHeight = list.clientHeight;
+	document.addEventListener('scroll', animateLists);
+
+	function inViewLists() {
+	  // get window height
+	  var windowHeight = window.innerHeight;
+	  // get number of pixels that the document is scrolled
+	  var scrollY = window.scrollY || window.pageYOffset;
+
+	  // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+	  var scrollPosition = scrollY + windowHeight;
+	  // get element position (distance from the top of the page to the bottom of the element)
+	  var elementPosition = list.getBoundingClientRect().top + scrollY + elementHeight;
+
+	  // is scroll position greater than element position? (is element in view?)
+	  if (scrollPosition > elementPosition) {
+	    return true;
+	  }
+
+	  return false;
+	}
+
+	function animateLists() {
+	  // is element in view?
+	  if (inViewLists()) {
+			for (i=0;i<skillLists.length;i++) {
+	      // element is in view, add class to element
+	      skillLists[i].classList.add('skill-list-visible');
+
+			}
+	  }
+	}
+
+
+	//Animate Footer
+	var footer = document.querySelector('#main-footer');
+	var header = document.querySelector('nav');
+	var contactButton = document.querySelector('#submit-btn');
+	var contactHead = document.querySelector('#contact');
+		var elementHeight = contactButton.clientHeight;
+		document.addEventListener('scroll', animateNavs);
+
+		function inViewContactBtn() {
+			// get window height
+			var windowHeight = window.innerHeight;
+			// get number of pixels that the document is scrolled
+			var scrollY = window.scrollY || window.pageYOffset;
+
+			// get current scroll position (distance from the top of the page to the bottom of the current viewport)
+			var scrollPosition = scrollY + windowHeight;
+			// get element position (distance from the top of the page to the bottom of the element)
+			var elementPosition = contactButton.getBoundingClientRect().top + scrollY + elementHeight;
+			// is scroll position greater than element position? (is element in view?)
+			if (scrollPosition > elementPosition) {
+				return true;
+			}
+			return false;
+		}
+
+		function inViewContactHead() {
+			// get window height
+			var windowHeight = window.innerHeight;
+			// get number of pixels that the document is scrolled
+			var scrollY = window.scrollY || window.pageYOffset;
+
+			// get current scroll position (distance from the top of the page to the bottom of the current viewport)
+			var scrollPosition = scrollY + windowHeight;
+			// get element position (distance from the top of the page to the bottom of the element)
+			var elementPosition = contactHead.getBoundingClientRect().top + scrollY + elementHeight;
+			// is scroll position greater than element position? (is element in view?)
+			if (scrollPosition > elementPosition) {
+				return true;
+			}
+			return false;
+		}
+
+		function animateNavs() {
+		  // is element in view?
+		  if (inViewContactBtn()) {
+
+		      footer.classList.add('turn-blue');
+					header.classList.add('turn-blue');
+					var links = document.querySelectorAll('nav a');
+					for (i=0;i<links.length;i++) {
+						links[i].classList.add('turn-blue');
+					}
+				}
+					else {
+						footer.classList.remove('turn-blue');
+						header.classList.remove('turn-blue');
+	 				 var links = document.querySelectorAll('nav a');
+	 				 for (i=0;i<links.length;i++) {
+	 					 links[i].classList.remove('turn-blue');
+	 				}
+					}
+
+				}
 
 //Add Event Listeners to Project Icons//
 for (i=0;i<projectIcons.length;i++) {
