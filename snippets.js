@@ -104,17 +104,21 @@ var skillLists = document.querySelectorAll('.skill-list');
 
 		      footer.classList.add('turn-blue');
 					header.classList.add('turn-blue');
+					header.classList.add('add-white-bk');
 					var links = document.querySelectorAll('nav a');
 					for (i=0;i<links.length;i++) {
 						links[i].classList.add('turn-blue');
+					
 					}
 				}
 					else {
 						footer.classList.remove('turn-blue');
 						header.classList.remove('turn-blue');
+						header.classList.remove('add-white-bk');
 	 				 var links = document.querySelectorAll('nav a');
 	 				 for (i=0;i<links.length;i++) {
 	 					 links[i].classList.remove('turn-blue');
+
 	 				}
 					}
 

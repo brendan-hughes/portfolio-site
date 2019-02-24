@@ -180,10 +180,6 @@ font-size:13px;
 
 }
 
-.turn-transparent {
-	transition:0.3s;
-	background-color:transparent;
-}
 
 .turn-blue {
 	background-color:transparent;
@@ -536,6 +532,9 @@ clip-path: polygon(0 8%, 100% 0, 100% 100%, 100% 94%, 100% 94%, 0 100%);
 }
 
 
+.add-white-bk {
+	background-color:rgba(255, 255, 255)
+}
 
 .btn {
 	text-decoration: none;
