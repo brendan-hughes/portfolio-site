@@ -662,9 +662,8 @@ body > div.content-area.content-area-projects > div > div > p {
 		position:static;
 		order:4;
 		margin:auto;
-		font-size:24px;
-		
 
+		font-size:24px;
 	}
 	.popup-image {
 		display:flex;
@@ -733,10 +732,6 @@ right:-10px;
 	cursor:pointer;
 }
 
-
-	.header-arrow-projects {
-
-	}
 .header-arrow-projects:hover {
 	width:25px;
 	position:relative;
