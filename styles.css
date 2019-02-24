@@ -1,5 +1,5 @@
 html {
-	scroll-behavior: smooth
+	scroll-behavior: smooth;
 }
 
 body {
@@ -9,6 +9,11 @@ body {
 	margin: 0;
 	background: white;
 }
+button {
+	font-family:'Nunito', sans-serif;
+	font-weight:bold;
+}
+
 nav {
 	display: flex;
 	flex-wrap: unset;
@@ -98,7 +103,7 @@ border-radius:70px;
 
 
 
-.popup-live {
+.popup-live, .popup-git {
 	background: white;
 	border-radius: 1000px;
 	border:1px solid white;
@@ -113,12 +118,13 @@ border-radius:70px;
 	opacity:0;
 }
 
+
 .popup-live:hover, .popup-close:hover {
 	opacity:1;
 	color:rgb(0,184,214);
 	transform:scale(1.2);
-	box-shadow: 2px 2px 2px #fff;
 }
+
 
 .popup-live:focus, .popup-close:focus {
 	outline:none;
@@ -649,8 +655,6 @@ body > div.content-area.content-area-projects > div > div > p {
 		margin-right:auto;
 		margin-left:auto;
 		text-align:center;
-
-
 	}
 	.popup-header {
 		order:1;
@@ -660,19 +664,18 @@ body > div.content-area.content-area-projects > div > div > p {
 
 	}
 	.popup-live {
-
-		display:flex;
-		position:static;
 		order:4;
-		margin:auto;
-
 		font-size:24px;
+		position:static;
+		display:flex;
+		margin:auto;
 	}
+
 	.popup-image {
 		display:flex;
 		position:static;
-	order:2;
-	margin:auto;
+		order:2;
+		margin:auto;
 	}
 	.popup-text {
 		margin:auto;
@@ -684,8 +687,8 @@ body > div.content-area.content-area-projects > div > div > p {
 
 .popup-close {
 	position:absolute;
-top:0;
-right:-10px;
+	top:0;
+	right:-10px;
 }
 
 	.form-message {
