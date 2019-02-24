@@ -401,8 +401,9 @@ background:#fff;
 .content-area-form label {
 	margin-bottom: 10px;
 }
-.content-area-form input {
+.content-area-form input, .content-area-form textarea {
 	margin-bottom: 10px;
+	font-family: 'Nunito', sans-serif;
 }
 .item-container {
 	display: flex;
