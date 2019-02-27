@@ -328,7 +328,6 @@ hr {
 }
 nav a:hover {
 	color: #A2AEBB;
-	transform: scaleX(1.1) scaleY(1.1);
 }
 nav a:focus, nav a:active, footer a:focus, footer a:active {
 	color: #A2AEBB;
