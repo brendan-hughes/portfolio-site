@@ -143,7 +143,7 @@ popupCloseBtn.addEventListener('click',popupToggle);
 
 		$(document).ready(function(){
 	        $("#frontend-img").hover(function () {
-	            $("#frontend-list").css('color','#23B5D3');
+	            $("#frontend-list").css('color','#5f55ff');
 	        });
     });
 
@@ -155,7 +155,7 @@ popupCloseBtn.addEventListener('click',popupToggle);
 
 		$(document).ready(function(){
 	        $("#backend-img").hover(function () {
-	            $("#backend-list").css('color','#23B5D3');
+	            $("#backend-list").css('color','#5f55ff');
 	        });
     });
 
@@ -167,7 +167,7 @@ popupCloseBtn.addEventListener('click',popupToggle);
 
 		$(document).ready(function(){
 	        $("#languages-img").hover(function () {
-	             $("#languages-list").css('color','#23B5D3');
+	             $("#languages-list").css('color','#5f55ff');
 	        });
     });
 
@@ -179,7 +179,7 @@ popupCloseBtn.addEventListener('click',popupToggle);
 
 		$(document).ready(function(){
 	        $("#other-img").mouseover(function () {
-	            $("#other-list").css('color','#23B5D3');
+	            $("#other-list").css('color','#5f55ff');
 	        });
     });
 

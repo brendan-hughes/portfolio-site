@@ -1,3 +1,9 @@
+/* #5f55ff BLUE
+#000000 BLACK
+#1e2022 beforeblack nav
+
+*/
+
 html {
 	scroll-behavior: smooth;
 }
@@ -62,7 +68,7 @@ nav {
 	height:300px;
 
 
-background-color: #00b8d6;
+background-color: #5f55ff;
 border-radius:70px;
 }
 
@@ -119,9 +125,16 @@ border-radius:70px;
 }
 
 
-.popup-live:hover, .popup-close:hover {
+.popup-live:hover{
 	opacity:1;
-	color:rgb(0,184,214);
+	color:#5f55ff;
+	transform:scale(1.2);
+	cursor:pointer;
+}
+
+.popup-close:hover {
+	opacity:1;
+	color:#828282;
 	transform:scale(1.2);
 	cursor:pointer;
 }
@@ -150,14 +163,14 @@ border-radius:70px;
 }
 .popup-image:hover {
 	transform:scale(1.01);
-	box-shadow:rgba(0,184,214,0.7) 2px 2px 2px;
+	box-shadow:#4a42c4 2px 2px 2px;
 }
 
 .popup-close:hover{
 	opacity:1;
 	border:lightgrey;
 	cursor:pointer;
-	color:rgb(0,184,214);
+	color:;
 }
 .popup-close:focus{
 	outline:none;
@@ -247,7 +260,7 @@ nav a {
 	text-align: center;
 }
 .main-header {
-	color: #1E2022;
+	color: white;
 	font-size: 1.5rem;
 }
 
@@ -327,7 +340,7 @@ hr {
 	vertical-align: center;
 }
 nav a:hover {
-	color: #A2AEBB;
+	color: #5f55ff;
 }
 nav a:focus, nav a:active, footer a:focus, footer a:active {
 	color: #A2AEBB;
@@ -369,7 +382,7 @@ footer a:not(.footer-link-first) {
 }
 
 .transition-span {
-	color:#23B5D3;
+
 	transition:0.2s;
 	opacity:1;
 }
@@ -401,7 +414,7 @@ background:#fff;
 	background-position: repeat;
 }
 .content-area-projects {
-	background: #1E2022/*#4B4E6D*/;
+	background: #1e2022/*#4B4E6D*/;
 	color: white;
 }
 .content-area-form label {
@@ -477,8 +490,8 @@ background:#fff;
 #home {
 	height: 100vh;
 	background-size: repeat;
-	background-color: #f0f5f9;
-	background-image: radial-gradient(transparent 20%, #fff 55%), url("images/tiny-squares.png");
+	background-color: #1e2022;
+	background-image:;
 }
 .content-area h1 {
 	padding-top: 8vh;
