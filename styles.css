@@ -158,6 +158,7 @@ border: 2px white solid;
 	transition:.2s;
 	opacity:0;
 	border:2px white solid;
+	object-fit: cover;
 }
 .popup-image:hover {
 	transform:scale(1.01);
