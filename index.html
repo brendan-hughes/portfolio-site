@@ -21,8 +21,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700" rel="stylesheet">
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -109,7 +109,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<h1 class="popup-header">Project Title</h1>
 		<p class="popup-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ex elit, aliquam ac malesuada a, rhoncus eu leo. Praesent sed risus ultrices, hendrerit risus dictum, tempor nunc. Aliquam enim orci, hendrerit in nisi nec, interdum tincidunt ex.</p>
 		<img class="popup-image" src="images/SmallFullColourGIF.gif">
-		<button class="popup-live">SEE LIVE</button>
+		<a id="see-live-link" href="" target="_blank"><button class="popup-live">SEE LIVE</button></a>
 	</div>
 </div>
 
@@ -119,15 +119,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<p>Part passion, part practice.<br>These projects illustrate my understanding of modern web technologies, and evidence my ability to leverage them creatively.</p><hr>
 
 		<div class="item-container">
-		<div class="item item-project">
-			<h3>Project 1</h3>
+		<div class="item item-project" id="project-one-container">
+			<h3>Rock, Paper, Scissors</h3>
 			<img src="images/instagram.png" id="project1-img">
 		</div>
-		<div class="item item-project">
+		<div class="item item-project" id="project-two-container">
 			<h3>Project 2</h3>
 			<img src="images/food.png" id="project2-img">
 		</div>
-		<div class="item item-project">
+		<div class="item item-project" id="project-three-container">
 			<h3>Project 3</h3>
 			<img src="images/like.png" id="project3-img">
 		</div>

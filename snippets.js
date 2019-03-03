@@ -1,23 +1,49 @@
 var popup = document.querySelector(".popup");
 var popupText = document.querySelector(".popup-text");
 var popupHeader = document.querySelector('.popup-header');
-var projectIcons = document.querySelectorAll(".item-project");
+var projectOneIcon = document.querySelector("#project-one-container");
+var projectTwoIcon = document.querySelector("#project-two-container");
+var projectThreeIcon = document.querySelector("#project-three-container");
 var popupBackground = document.querySelector(".popup-background");
 var popupSeeLive = document.querySelector(".popup-live");
+var popupSeeLiveLink = document.querySelector("#see-live-link");
 var popupImage = document.querySelector(".popup-image");
 var popupCloseBtn =document.querySelector(".popup-close");
 
 
 var popupToggle = function () {
-	console.log("Toggled class")
   popup.classList.toggle("show");
 	popupHeader.classList.toggle("show");
 	popupText.classList.toggle("show");
 	popupCloseBtn.classList.toggle("show");
 	popupSeeLive.classList.toggle("show");
 	popupImage.classList.toggle("show");
-	//popupBackground.classList.toggle("greyed-out");
 };
+
+var popupToggleOne = function () {
+	popupToggle();
+	popupHeader.innerHTML = "Rock, Paper, Scissors";
+	popupText.innerHTML = "A simple exercise.";
+	popupImage.setAttribute("src","images/rps1.png");
+	popupSeeLiveLink.setAttribute("href","https://brendan-hughes.github.io/rps-game/");
+};
+
+var popupToggleTwo = function () {
+	popupToggle();
+	popupHeader.innerHTML = "Project 2";
+	popupText.innerHTML = "A simple exercise.";
+};
+
+var popupToggleThree = function () {
+	popupToggle();
+	popupHeader.innerHTML = "Project 3";
+	popupText.innerHTML = "A simple exercise.";
+};
+
+projectOneIcon.addEventListener('click', popupToggleOne);
+projectTwoIcon.addEventListener('click', popupToggleTwo);
+projectThreeIcon.addEventListener('click', popupToggleThree);
+popupCloseBtn.addEventListener('click',popupToggle);
 
 //Animate Skill Lists
 var skillLists = document.querySelectorAll('.skill-list');
@@ -135,10 +161,7 @@ var skillLists = document.querySelectorAll('.skill-list');
 				}
 
 //Add Event Listeners to Project Icons//
-for (i=0;i<projectIcons.length;i++) {
-	projectIcons[i].addEventListener('click', popupToggle);
-}
-popupCloseBtn.addEventListener('click',popupToggle);
+
 
 
 		$(document).ready(function(){
