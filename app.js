@@ -1,3 +1,4 @@
+//Variable Declarations
 let projectCards = document.querySelectorAll('.project-card')
 let seeWorkBtn = document.querySelector('#see-work-btn')
 let seeWorkArrow = document.querySelector('#see-work-arrow')
@@ -27,6 +28,7 @@ let projectDetails = [{
   img:"project 4 image source",
   url:"project 4 url"
 }]
+
 //FUNCTIONS
 let clickCard=function(card) {
     let id = card.target.id
