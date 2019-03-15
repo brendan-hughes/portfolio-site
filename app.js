@@ -1,10 +1,15 @@
 //Variable Declarations
-let projectCards = document.querySelectorAll('.project-card')
-let seeWorkBtn = document.querySelector('#see-work-btn')
-let seeWorkArrow = document.querySelector('#see-work-arrow')
+let projectCards = document.querySelectorAll('.card')
+let learnMoreBtn = document.querySelector('#learn-more-btn')
+let seeWorkArrow = document.querySelector('#learn-more-arrow')
+let viewProjectsBtn = document.querySelector('#see-work-btn')
+let viewProjectsArrow = document.querySelector('#see-work-arrow')
 let toTopBtn = document.querySelector('.to-top-arrow')
 let topOfPage = document.querySelector('#top')
 let contactText = document.querySelector('.contact-text')
+let fullName = document.querySelector('#full-name')
+
+
 
 let projectDetails = [{
   id:'project1',
@@ -39,43 +44,38 @@ let clickCard=function(card) {
     }
 }
 // Button Functions
-let seeMoreHover = function() {
+let learnMoreHover = function() {
   seeWorkArrow.classList.toggle('rotate-arrow')
 }
-let seeMoreClick = function() {
-  console.log("Clicked")
+let viewProjectsHover = function() {
+  viewProjectsArrow.classList.toggle('rotate-arrow')
 }
 
-let toTopAnimation = function () {
-  toTopBtn.classList.add('fly-arrow')
-  topOfPage.scrollIntoView();
-}
 let showArrow = function(ev) {
-
-   var aboutMeDiv = document.getElementById('about-me');
+   var aboutMeDiv = document.getElementById('about-me-area');
    var distanceToTop = aboutMeDiv.getBoundingClientRect().top;
-   if (distanceToTop <=0) {
+   if (distanceToTop <=10) {
      toTopBtn.classList.add('visible')
-   } else if (distanceToTop>0 && toTopBtn.classList.contains('visible')) {
+   } else if (distanceToTop>10 && toTopBtn.classList.contains('visible')) {
      toTopBtn.classList.remove('visible')
    }
-};
+}
 
 let showContact = function(ev) {
-
    var projectsDiv = document.getElementById('projects');
    var distanceToTop = projectsDiv.getBoundingClientRect().top;
-   if (distanceToTop <=0) {
+   if (distanceToTop <=50) {
      contactText.classList.add('visible')
-   } else if (distanceToTop>0 && contactText.classList.contains('visible')) {
+   } else if (distanceToTop>50 && contactText.classList.contains('visible')) {
      contactText.classList.remove('visible')
    }
 };
 
 //Add Event Listeners
-seeWorkBtn.addEventListener('mouseover',seeMoreHover)
-seeWorkBtn.addEventListener('mouseout',seeMoreHover)
-seeWorkBtn.addEventListener('click',seeMoreClick)
+learnMoreBtn.addEventListener('mouseover',learnMoreHover)
+learnMoreBtn.addEventListener('mouseout',learnMoreHover)
+viewProjectsBtn.addEventListener('mouseover',viewProjectsHover)
+viewProjectsBtn.addEventListener('mouseout',viewProjectsHover)
 window.addEventListener('scroll', showArrow)
 window.addEventListener('scroll', showContact)
 

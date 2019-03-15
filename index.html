@@ -1,4 +1,4 @@
-<html>
+home<html>
 <head>
 <title>Brendan Hughes | Web Developer</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128060975-2"></script>
@@ -13,34 +13,37 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-<a href="#top"><img src="images/to-top-arrow.png" class="to-top-arrow"></a><p class="to-top-text">Back to top</p>
+
+<a href="#top"><img src="images/to-top-arrow.png" class="to-top-arrow" id="to-top-arrow"></a>
 <div class="container" id="top">
-  <div class="middle-row">
-    <h1 class="main-header">Hi, I'm <span>Brendan Hughes</span></h1>
-    <h2 class="main-header">I'm a full-stack web developer.</h2>
-    <a href="#about-me" id="see-work-btn">View my work<img src="images/arrow.png" id="see-work-arrow"></a>
+  <div class="home-row">
+    <h1 class="main-header">Hi, I'm <span id="full-name">Brendan Hughes</span></h1>
+    <h2 class="main-header">I'm a <span id="title-text">full-stack web developer.</span></h2>
+    <a href="#about-me" id="learn-more-btn">Learn more<img src="images/arrow.png" id="learn-more-arrow"></a>
   </div>
 </div>
-<div class="container" id="about-me">
-  <div class="top-row">
-    <div class="project-card " id="about-me"><p>About Me</div>
-    <div class="project-card" id="my-skills"><p>My Skills</p></div>
+<div class="container" id="about-me-area">
+  <div class="about-row">
+    <div class="card " id="about-me"><p>About Me</div> <!-- My career began as a web analyst. I wonder where I'll go next...-->
+    <div class="card" id="my-skills"><p>My Skills</p></div> <!-- Front End, Back End, Build Tools, Other -->
   </div>
+</div>
+<div class="section-break-container">
+  <a href="#projects" id="see-work-btn">View my projects<img src="images/arrow.png" id="see-work-arrow"></a>
 </div>
 <div class="container project-container" id="projects">
-  <div class="bottom-row">
-    <div class="project-card " id='project1' value='project4'><p>Project 1</p></div>
-    <div class="project-card " id='project2'><p>Project 2</p></div>
+  <div class="projects-row">
+    <div class="card " id='project1'><p>Project 1</p></div>
+    <div class="card " id='project2'><p>Project 2</p></div>
   </div>
-  <div class="bottom-row">
-    <div class="project-card " id='project3'><p>Project 3</p></div>
-    <div class="project-card " id='project4'><p>Project 4</p></div>
+  <div class="projects-row">
+    <div class="card " id='project3'><p>Project 3</p></div>
+    <div class="card " id='project4'><p>Project 4</p></div>
     </div>
 </div>
 <footer id="main-footer">
-  <p class='contact-text'>Have a question or think we can work together? Send me an email!</p>
+  <p class='contact-text'>Have a question? Let's get in touch.</p>
   <a href="mailto:b.dalton.hughes@gmail.com" target="_blank"><img src="images/email_icon.png"></a>
   <a href="https://github.com/brendan-hughes?tab=repositories"><img src="images/github_icon.png"></a>
   <a href="https://linkedin.com/in/brendan-hughes-868812149/"><img src="images/linkedin_icon.png"></a>

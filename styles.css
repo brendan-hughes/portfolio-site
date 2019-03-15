@@ -2,11 +2,15 @@ body {
   font-family: 'Raleway', sans-serif;
   margin:0;
   background:black;
-
 }
 html {
   scroll-behavior: smooth;
-  
+
+}
+
+a {
+  text-decoration:none;
+  cursor:pointer;
 }
 
 h1.main-header, h2.main-header {
@@ -22,7 +26,7 @@ h3 {
   font-size:10pt;
 }
 
-h1.main-header span {
+#full-name {
   color:#809BCE;
 }
 
@@ -38,7 +42,7 @@ h1.contact-header, h2.contact-header {
   color:white;
 }
 
-#see-work-btn {
+#learn-more-btn, #see-work-btn {
   border:3px solid white;
   color: white;
   background: transparent;
@@ -46,19 +50,30 @@ h1.contact-header, h2.contact-header {
   font-weight:300;
   font-size:13pt;
   width:200px;
-
   margin: 15px auto 0px auto;
   line-height:22px;
   padding:10px 0px;
   transition:0.4s;
   text-decoration:none;
+}
+.section-break-container {
+  display:flex;
+  width:100%;
+  height:50px;
+  margin-bottom:95px;
+  flex-direction:column;
+  justify-content:space-between;
+}
+#see-work-btn {
 
+  text-align:center;
+  padding:10px 0px;
 }
 
-#see-work-btn:hover {
-  background:rgba(255,255,255,0.3)
+#learn-more-btn:hover, #see-work-btn:hover {
+  background:rgba(255,255,255,0.3);
 }
-#see-work-btn:focus {
+#learn-more-btn:focus, #see-work-btn:focus {
   outline:none;
 }
 
@@ -67,8 +82,13 @@ h1.contact-header, h2.contact-header {
   position:fixed;
   top:10;
   right:10;
-  transition:1s;
+  transition:0.2s;
   opacity:0;
+}
+
+
+.to-top-arrow:hover{
+  transform:scale(1.1);
 }
 
 .contact-text {
@@ -76,6 +96,7 @@ h1.contact-header, h2.contact-header {
   opacity:0;
   transition:1s;
 }
+
 .visible {
   visibility:visible;
   opacity:1;
@@ -84,7 +105,7 @@ h1.contact-header, h2.contact-header {
 
 
 
-#see-work-arrow {
+#learn-more-arrow,#see-work-arrow {
   width:12px;
   margin-left:20px;
   padding:0;
@@ -97,42 +118,53 @@ h1.contact-header, h2.contact-header {
   position:fixed;
   width:100vw;
   bottom:0;
-  background:linear-gradient(transparent,black 40%);
+  background:linear-gradient(transparent, black 40%);
   text-align:center;
   padding:10px 0px;
 }
 #main-footer a {
-  text-decoration:none;
-  font-weight:lighter;
+  font-weight:300;
   padding: 0px 10px;
   color:#92BCEA;
-  cursor:pointer;
 }
 #main-footer a img {
   width:30px;
   transition:0.2s;
-  cursor:pointer;
 }
 #main-footer a img:hover {
   transform:scale(1.2);
-  cursor:pointer;
 }
 #main-footer p {
   color:white;
-  font-size:8pt;
+  font-size:12pt;
 }
 
 .container {
   display:flex;
   width:100%;
-  height:calc(100% - 77px);
-  margin-bottom:77px;
+  height:calc(100% - 95px);
   flex-direction:column;
   justify-content:space-between;
 }
 
+.project-container {
+  margin-bottom:95px;
+}
 
-.top-row {
+#about-me{
+  width:50%;
+}
+
+.project-header-text {
+  color:white;
+  font-weight:300;
+}
+
+.project-header {
+  text-align:center;
+}
+
+.about-row {
   display:flex;
   width:100%;
   height:100%;
@@ -141,7 +173,7 @@ h1.contact-header, h2.contact-header {
   align-content:center;
 }
 
-.middle-row {
+.home-row {
   height:100%;
   text-align:center;
   vertical-align:middle;
@@ -151,16 +183,17 @@ h1.contact-header, h2.contact-header {
   align-content:middle;
 }
 
-.bottom-row {
+.projects-row {
   display:flex;
-  height:100%;
+  height:45%;
   flex-direction:row;
   justify-content:center;
   align-content:center;
 }
 
-.project-card {
-  width:100%;
+.card {
+  width:40%;
+  margin:auto;
   display:flex;
   flex-direction:column;
   justify-content: center;
@@ -168,23 +201,43 @@ h1.contact-header, h2.contact-header {
   height:100%;
   transition:0.3s;
   color:white;
-  background:black;
+  border:white 5px solid;
 }
 
-.project-card:hover {
+#about-me, #my-skills {
+  height:80%;
+}
+
+
+.card:hover {
   background-image:url('images/comp.jpg');
   background-size:cover;
   background-repeat:no-repeat;
+  opacity:1;
   color:white;
 }
 
-
+.see-projects-text {
+  color:white;
+  text-align:center;
+  font-size:15pt;
+}
 @media only screen and (max-width: 600px) {
-  h1 {
+  h1.main-header {
         font-size:20pt;
   }
-  h2 {
+  h2.main-header {
         font-size:15pt;
   }
-
+  #main-footer p {
+    color:white;
+    font-size:9pt;
+  }
+  .about-row{
+    flex-direction:column;
+  }
+  #about-me, #my-skills {
+    width:90%;
+    height:45%;
+  }
 }
