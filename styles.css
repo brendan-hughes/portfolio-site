@@ -13,12 +13,79 @@ a {
   cursor:pointer;
 }
 
-h1.main-header, h2.main-header {
+h1.main-header, h2.sub-header {
     color:white;
     font-weight:400;
     margin:10px;
 }
 
+/*Vertical Sliding*/
+.title-text{
+	display: inline;
+	text-indent: 8px;
+}
+.title-text span{
+	animation: topToBottom 12.5s linear infinite 0s;
+	-ms-animation: topToBottom 12.5s linear infinite 0s;
+	-webkit-animation: topToBottom 12.5s linear infinite 0s;
+	color: white;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.title-text span:nth-child(2){
+	animation-delay: 2.5s;
+	-ms-animation-delay: 2.5s;
+	-webkit-animation-delay: 2.5s;
+}
+.title-text span:nth-child(3){
+	animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+}
+.title-text span:nth-child(4){
+	animation-delay: 7.5s;
+	-ms-animation-delay: 7.5s;
+	-webkit-animation-delay: 7.5s;
+}
+.title-text span:nth-child(5){
+	animation-delay: 10s;
+	-ms-animation-delay: 10s;
+	-webkit-animation-delay: 10s;
+}
+
+@-moz-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: translateY(-50px); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -ms-transform: translateY(-50px); }
+	10% { opacity: 1; -ms-transform: translateY(0px); }
+	25% { opacity: 1; -ms-transform: translateY(0px); }
+	30% { opacity: 0; -ms-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+.sub-header {
+
+}
+
+}
 h3 {
   color:white;
   font-weight:300;
@@ -27,23 +94,38 @@ h3 {
 }
 
 #full-name {
-  color:#809BCE;
+  color:white;
+  background: linear-gradient(to right,#809BCE, #0094C6, #0EB1D2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
 h1.main-header {
       font-size:32pt;
 }
-h2.main-header {
+h2.sub-header {
       font-size:30px;
+      position:relative;
+      right:115px;
 }
 
 h1.contact-header, h2.contact-header {
   color:white;
 }
 
+.section-break-container {
+  display:flex;
+  width:100%;
+  height:50px;
+  margin-bottom:85px;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
 #learn-more-btn, #see-work-btn {
   border:3px solid white;
+  border-radius:50px;
   color: white;
   background: transparent;
   font-family: 'Raleway', sans-serif;
@@ -53,25 +135,18 @@ h1.contact-header, h2.contact-header {
   margin: 15px auto 0px auto;
   line-height:22px;
   padding:10px 0px;
-  transition:0.4s;
+  transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    -moz-transition: background-color .5s;
   text-decoration:none;
 }
-.section-break-container {
-  display:flex;
-  width:100%;
-  height:50px;
-  margin-bottom:95px;
-  flex-direction:column;
-  justify-content:space-between;
-}
 #see-work-btn {
-
   text-align:center;
   padding:10px 0px;
 }
-
 #learn-more-btn:hover, #see-work-btn:hover {
-  background:rgba(255,255,255,0.3);
+  background:rgba(14, 177, 210,1);
 }
 #learn-more-btn:focus, #see-work-btn:focus {
   outline:none;
@@ -201,7 +276,6 @@ h1.contact-header, h2.contact-header {
   height:100%;
   transition:0.3s;
   color:white;
-  border:white 5px solid;
 }
 
 #about-me, #my-skills {
@@ -226,8 +300,10 @@ h1.contact-header, h2.contact-header {
   h1.main-header {
         font-size:20pt;
   }
-  h2.main-header {
-        font-size:15pt;
+  h2.sub-header {
+        font-size:13pt;
+        position:relative;
+        right:68px;
   }
   #main-footer p {
     color:white;
@@ -239,5 +315,8 @@ h1.contact-header, h2.contact-header {
   #about-me, #my-skills {
     width:90%;
     height:45%;
+  }
+  .section-break-container {
+    margin-bottom:40px;
   }
 }
