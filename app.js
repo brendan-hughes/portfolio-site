@@ -64,9 +64,9 @@ let showArrow = function(ev) {
 let showContact = function(ev) {
    var projectsDiv = document.getElementById('projects');
    var distanceToTop = projectsDiv.getBoundingClientRect().top;
-   if (distanceToTop <=100) {
+   if (distanceToTop <=60) {
      contactText.classList.add('visible')
-   } else if (distanceToTop>100 && contactText.classList.contains('visible')) {
+   } else if (distanceToTop>60 && contactText.classList.contains('visible')) {
      contactText.classList.remove('visible')
    }
 };
