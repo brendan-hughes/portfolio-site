@@ -232,6 +232,7 @@ h1.contact-header, h2.contact-header {
 
 .project-container {
   margin-bottom:95px;
+  justify-content:space-around;
 }
 
 #about-me{
@@ -323,18 +324,28 @@ height:80%;
 
 @media only screen and (max-width: 570px) {
   .card {
-    height:155px;
-    width:240px;
+    height:80%;
+    width:100%;
     margin-bottom:15px;
   }
   .projects-row {
+    width:90%;
+    height:45%;
     display:flex;
     flex-direction:column;
+    margin:0 auto;
+  }
+  .project-container {
+    margin-bottom:95px;
+    justify-content:center;
+  }
+  #projects {
+    height:200%;
+
   }
 
   .row-2 {
-    position:relative;
-    bottom:57px;
+
   }
   .contact-text {
     position:relative;
