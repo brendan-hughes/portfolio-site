@@ -146,7 +146,7 @@ h1.contact-header, h2.contact-header {
   padding:10px 0px;
 }
 #learn-more-btn:hover, #see-work-btn:hover {
-  background:rgba(14, 177, 210,1);
+  background:#0094C6;
 }
 #learn-more-btn:focus, #see-work-btn:focus {
   outline:none;
