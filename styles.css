@@ -5,7 +5,6 @@ body {
 }
 html {
   scroll-behavior: smooth;
-
 }
 
 a {
@@ -15,7 +14,7 @@ a {
 
 h1.main-header, h2.sub-header {
     color:white;
-    font-weight:400;
+    font-weight:300;
     margin:10px;
 }
 
@@ -170,6 +169,12 @@ h1.contact-header, h2.contact-header {
   visibility:hidden;
   opacity:0;
   transition:1s;
+  background:linear-gradient(to right,#809BCE, #0094C6, #0EB1D2);
+  font-weight:300;
+  border:white 3px solid;
+  border-radius:10px;
+  width:275px;
+  margin: 0 auto 5px;
 }
 
 .visible {
@@ -308,6 +313,7 @@ h1.contact-header, h2.contact-header {
   #main-footer p {
     color:white;
     font-size:9pt;
+    width:225px;
   }
   .about-row{
     flex-direction:column;
