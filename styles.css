@@ -97,6 +97,7 @@ h3 {
   background: linear-gradient(to right,#809BCE, #0094C6, #0EB1D2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight:700;
 }
 
 
@@ -192,7 +193,7 @@ h1.contact-header, h2.contact-header {
   transition:0.4s;
 }
 .rotate-arrow {
-  transform:rotate(90deg)
+  transform:rotate(90deg) scale(1.3);
 }
 #main-footer{
   position:fixed;
@@ -272,7 +273,8 @@ h1.contact-header, h2.contact-header {
 }
 
 .card {
-  width:40%;
+  height:240px;
+  width:425px;
   margin:auto;
   display:flex;
   flex-direction:column;
@@ -281,10 +283,11 @@ h1.contact-header, h2.contact-header {
   height:100%;
   transition:0.3s;
   color:white;
+  border:white solid 2px;
 }
 
 #about-me, #my-skills {
-  height:80%;
+height:80%;
 }
 
 
@@ -301,7 +304,41 @@ h1.contact-header, h2.contact-header {
   text-align:center;
   font-size:15pt;
 }
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 1050px) {
+.card {
+  height:197px;
+  width:350px;
+}
+}
+
+@media only screen and (max-width: 750px) {
+.card {
+  height:155px;
+  width:275px;
+}
+
+
+@media only screen and (max-width: 570px) {
+  .card {
+    height:155px;
+    width:240px;
+    margin-bottom:15px;
+  }
+  .projects-row {
+    display:flex;
+    flex-direction:column;
+  }
+
+  .row-2 {
+    position:relative;
+    bottom:57px;
+  }
+  .contact-text {
+    position:relative;
+    bottom:20px;
+  }
+
   h1.main-header {
         font-size:20pt;
   }
@@ -310,11 +347,11 @@ h1.contact-header, h2.contact-header {
         position:relative;
         right:68px;
   }
-  
+
   #main-footer p {
     color:white;
-    font-size:9pt;
-    width:225px;
+    font-size:12pt;
+    width:275px;
   }
   .about-row{
     flex-direction:column;
@@ -326,4 +363,5 @@ h1.contact-header, h2.contact-header {
   .section-break-container {
     margin-bottom:40px;
   }
+
 }
