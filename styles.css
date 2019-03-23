@@ -360,7 +360,7 @@ height:80%;
   background-size:cover;
   background-repeat:no-repeat;
 }
-.about-me-card {
+.about-me-card { 
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/about-me.jpg');
 }
 .my-skills-card {

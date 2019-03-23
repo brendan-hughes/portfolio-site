@@ -107,7 +107,7 @@ const showVisible = function (ev) {
     contactText.classList.remove('visible')
   }
 
-
+ 
   let distanceToAboutMe = aboutMeCard.getBoundingClientRect().top;
   if (distanceToAboutMe <= 400) {
     aboutMeCard.classList.add('visible-project')
