@@ -453,7 +453,12 @@ height:80%;
   margin-bottom:40px;
 }
 .view-project-btn, .view-code-btn {
-  margin:0px 10px 10px;
+  position:relative;
+  bottom:30px;
+}
+.project-skill-list {
+  position:relative;
+  bottom:15px;
 }
 }
 
@@ -470,12 +475,12 @@ height:80%;
     flex-direction:column;
     margin:0 auto;
   }
+  #projects {
+    height:200%;
+  }
   .project-container {
     margin-bottom:95px;
     justify-content:center;
-  }
-  #projects {
-    height:200%;
   }
   .contact-text {
     position:relative;
@@ -508,12 +513,16 @@ height:80%;
   }
   .section-break-container {
     margin-bottom:-90px;
-
   }
   .row-2{
     margin-bottom:-125px;
   }
   .view-project-btn, .view-code-btn {
-    margin:20px 10px 0px;
+    position:relative;
+    top:10px;
+  }
+  .project-skill-list {
+    position:relative;
+    bottom:0;
   }
 }
