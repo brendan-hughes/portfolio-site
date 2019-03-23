@@ -1,17 +1,23 @@
 //Variable Declarations
-let projectCards = document.querySelectorAll('.card')
-let learnMoreBtn = document.querySelector('#learn-more-btn')
-let seeWorkArrow = document.querySelector('#learn-more-arrow')
-let viewProjectsBtn = document.querySelector('#see-work-btn')
-let viewProjectsArrow = document.querySelector('#see-work-arrow')
-let toTopBtn = document.querySelector('.to-top-arrow')
-let topOfPage = document.querySelector('#top')
-let contactText = document.querySelector('.contact-text')
-let fullName = document.querySelector('#full-name')
+const projectCards = document.querySelectorAll('.card')
+const learnMoreBtn = document.querySelector('#learn-more-btn')
+const seeWorkArrow = document.querySelector('#learn-more-arrow')
+const viewProjectsBtn = document.querySelector('#see-work-btn')
+const viewProjectsArrow = document.querySelector('#see-work-arrow')
+const toTopBtn = document.querySelector('.to-top-arrow')
+const topOfPage = document.querySelector('#top')
+const contactText = document.querySelector('.contact-text')
+const fullName = document.querySelector('#full-name')
+const projectOneCard = document.querySelector('.project1');
+const projectTwoCard = document.querySelector('.project2');
+const projectThreeCard = document.querySelector('.project3');
+const projectFourCard = document.querySelector('.project4');
+const aboutMeDiv = document.getElementById('about-me-area');
+const projectsDiv = document.getElementById('projects');
 
 
 
-let projectDetails = [{
+const projectDetails = [{
   id:'project1',
   details:"project 1 details",
   img:"project 1 image source",
@@ -35,8 +41,9 @@ let projectDetails = [{
 }]
 
 //FUNCTIONS
-let clickCard=function(card) {
-    let id = card.target.id
+//clickCard pulls project details data from array based on ID of project card. Would be used for a modal.
+const clickCard=function(card) {
+    const id = card.target.id
     for (i=0; i < projectDetails.length; i++) {
         if (projectDetails[i].id === id) {
             console.log(projectDetails[i].details) ;
@@ -44,41 +51,84 @@ let clickCard=function(card) {
     }
 }
 // Button Functions
-let learnMoreHover = function() {
+//Button Hover Animations
+const learnMoreHover = function() {
   seeWorkArrow.classList.toggle('rotate-arrow')
 }
-let viewProjectsHover = function() {
+const viewProjectsHover = function() {
   viewProjectsArrow.classList.toggle('rotate-arrow')
 }
 
-let showArrow = function(ev) {
-   var aboutMeDiv = document.getElementById('about-me-area');
-   var distanceToTop = aboutMeDiv.getBoundingClientRect().top;
-   if (distanceToTop <=10) {
+//Show Back to Top Arrow after reaching the About Me section
+const showArrow = function(ev) {
+   let distanceToAboutMeDiv = aboutMeDiv.getBoundingClientRect().top;
+   if (distanceToAboutMeDiv <=10) {
      toTopBtn.classList.add('visible')
-   } else if (distanceToTop>10 && toTopBtn.classList.contains('visible')) {
+   } else if (distanceToAboutMeDiv>10 && toTopBtn.classList.contains('visible')) {
      toTopBtn.classList.remove('visible')
    }
 }
-
-let showContact = function(ev) {
-   var projectsDiv = document.getElementById('projects');
-   var distanceToTop = projectsDiv.getBoundingClientRect().top;
-   if (distanceToTop <=60) {
+//Show Contact Callout when you get to project section
+const showContact = function(ev) {
+   let distanceToProjectsDiv = projectsDiv.getBoundingClientRect().top;
+   if (distanceToProjectsDiv <=60) {
      contactText.classList.add('visible')
-   } else if (distanceToTop>60 && contactText.classList.contains('visible')) {
+   } else if (distanceToProjectsDiv>60 && contactText.classList.contains('visible')) {
      contactText.classList.remove('visible')
    }
 };
 
+//Show project 1 when you reach Project 1
+const showProjects = function(ev) {
+   let distanceToProjectOne = projectOneCard.getBoundingClientRect().top;
+   if (distanceToProjectOne <= 500) {
+     projectOneCard.classList.add('visible-project')
+   } else if (distanceToProjectOne> 500 && projectOneCard.classList.contains('visible-project')) {
+     projectOneCard.classList.remove('visible-project')
+   }
+};
+
+const showVisible = function (ev) {
+
+  let distanceToAboutMeDiv = aboutMeDiv.getBoundingClientRect().top;
+  if (distanceToAboutMeDiv <=10) {
+    toTopBtn.classList.add('visible')
+  } else if (distanceToAboutMeDiv>10 && toTopBtn.classList.contains('visible')) {
+    toTopBtn.classList.remove('visible')
+  }
+
+  let distanceToProjectsDiv = projectsDiv.getBoundingClientRect().top;
+  if (distanceToProjectsDiv <=60) {
+    contactText.classList.add('visible')
+
+  } else if (distanceToProjectsDiv>60 && contactText.classList.contains('visible')) {
+    contactText.classList.remove('visible')
+  }
+
+  let distanceToProjectOne = projectOneCard.getBoundingClientRect().top;
+  if (distanceToProjectOne <= 500) {
+    projectOneCard.classList.add('visible-project')
+  };
+  let distanceToProjectTwo = projectTwoCard.getBoundingClientRect().top;
+  if (distanceToProjectTwo <= 500) {
+    projectTwoCard.classList.add('visible-project')
+  };
+  let distanceToProjectThree = projectThreeCard.getBoundingClientRect().top;
+  if (distanceToProjectThree <= 500) {
+    projectThreeCard.classList.add('visible-project')
+  };
+  let distanceToProjectFour = projectFourCard.getBoundingClientRect().top;
+  if (distanceToProjectFour <= 500) {
+    projectFourCard.classList.add('visible-project')
+  };
+}
 
 //Add Event Listeners
 learnMoreBtn.addEventListener('mouseover',learnMoreHover)
 learnMoreBtn.addEventListener('mouseout',learnMoreHover)
 viewProjectsBtn.addEventListener('mouseover',viewProjectsHover)
 viewProjectsBtn.addEventListener('mouseout',viewProjectsHover)
-window.addEventListener('scroll', showArrow)
-window.addEventListener('scroll', showContact)
+window.addEventListener('scroll', showVisible)
 
 for (i=0;i<projectCards.length;i++) {
   projectCards[i].addEventListener('click',clickCard)
