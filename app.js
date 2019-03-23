@@ -12,6 +12,8 @@ const projectOneCard = document.querySelector('.project1');
 const projectTwoCard = document.querySelector('.project2');
 const projectThreeCard = document.querySelector('.project3');
 const projectFourCard = document.querySelector('.project4');
+const aboutMeCard = document.querySelector('.about-me-card');
+const mySkillsCard = document.querySelector('.my-skills-card');
 const aboutMeDiv = document.getElementById('about-me-area');
 const projectsDiv = document.getElementById('projects');
 
@@ -105,20 +107,29 @@ const showVisible = function (ev) {
     contactText.classList.remove('visible')
   }
 
+
+  let distanceToAboutMe = aboutMeCard.getBoundingClientRect().top;
+  if (distanceToAboutMe <= 400) {
+    aboutMeCard.classList.add('visible-project')
+  };
+  let distanceToMySkills = mySkillsCard.getBoundingClientRect().top;
+  if (distanceToMySkills <= 400) {
+    mySkillsCard.classList.add('visible-project')
+  };
   let distanceToProjectOne = projectOneCard.getBoundingClientRect().top;
-  if (distanceToProjectOne <= 500) {
+  if (distanceToProjectOne <= 400) {
     projectOneCard.classList.add('visible-project')
   };
   let distanceToProjectTwo = projectTwoCard.getBoundingClientRect().top;
-  if (distanceToProjectTwo <= 500) {
+  if (distanceToProjectTwo <= 400) {
     projectTwoCard.classList.add('visible-project')
   };
   let distanceToProjectThree = projectThreeCard.getBoundingClientRect().top;
-  if (distanceToProjectThree <= 500) {
+  if (distanceToProjectThree <= 400) {
     projectThreeCard.classList.add('visible-project')
   };
   let distanceToProjectFour = projectFourCard.getBoundingClientRect().top;
-  if (distanceToProjectFour <= 500) {
+  if (distanceToProjectFour <= 400) {
     projectFourCard.classList.add('visible-project')
   };
 }
