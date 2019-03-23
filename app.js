@@ -81,56 +81,68 @@ const showContact = function(ev) {
 };
 
 //Show project 1 when you reach Project 1
-const showProjects = function(ev) {
-   let distanceToProjectOne = projectOneCard.getBoundingClientRect().top;
-   if (distanceToProjectOne <= 500) {
-     projectOneCard.classList.add('visible-project')
-   } else if (distanceToProjectOne> 500 && projectOneCard.classList.contains('visible-project')) {
-     projectOneCard.classList.remove('visible-project')
-   }
-};
 
-const showVisible = function (ev) {
-
+const showTopBtn = function (ev) {
   let distanceToAboutMeDiv = aboutMeDiv.getBoundingClientRect().top;
   if (distanceToAboutMeDiv <=10) {
     toTopBtn.classList.add('visible')
   } else if (distanceToAboutMeDiv>10 && toTopBtn.classList.contains('visible')) {
     toTopBtn.classList.remove('visible')
   }
-
+};
+ const showContactText = function (ev) {
   let distanceToProjectsDiv = projectsDiv.getBoundingClientRect().top;
   if (distanceToProjectsDiv <=60) {
     contactText.classList.add('visible')
-
   } else if (distanceToProjectsDiv>60 && contactText.classList.contains('visible')) {
     contactText.classList.remove('visible')
-  }
+  }}
 
- 
+const showAboutMeCard = function (ev) {
   let distanceToAboutMe = aboutMeCard.getBoundingClientRect().top;
   if (distanceToAboutMe <= 400) {
     aboutMeCard.classList.add('visible-project')
+    window.removeEventListener('scroll', showAboutMeCard)
   };
+}
+
+const showMySkillsCard = function (ev) {
   let distanceToMySkills = mySkillsCard.getBoundingClientRect().top;
   if (distanceToMySkills <= 400) {
     mySkillsCard.classList.add('visible-project')
-  };
+    window.removeEventListener('scroll', showMySkillsCard)
+  }
+}
+
+const showProjectOneCard = function (ev) {
   let distanceToProjectOne = projectOneCard.getBoundingClientRect().top;
   if (distanceToProjectOne <= 400) {
     projectOneCard.classList.add('visible-project')
+    window.removeEventListener('scroll', showProjectOneCard)
   };
+}
+
+const showProjectTwoCard = function(ev) {
   let distanceToProjectTwo = projectTwoCard.getBoundingClientRect().top;
   if (distanceToProjectTwo <= 400) {
     projectTwoCard.classList.add('visible-project')
+    window.removeEventListener('scroll', showProjectTwoCard)
   };
+}
+
+const showProjectThreeCard = function(ev) {
   let distanceToProjectThree = projectThreeCard.getBoundingClientRect().top;
   if (distanceToProjectThree <= 400) {
     projectThreeCard.classList.add('visible-project')
+    window.removeEventListener('scroll', showProjectThreeCard)
   };
+}
+
+const showProjectFourCard = function(ev) {
   let distanceToProjectFour = projectFourCard.getBoundingClientRect().top;
   if (distanceToProjectFour <= 400) {
     projectFourCard.classList.add('visible-project')
+    window.removeEventListener('scroll', projectFourCard)
   };
 }
 
@@ -139,7 +151,14 @@ learnMoreBtn.addEventListener('mouseover',learnMoreHover)
 learnMoreBtn.addEventListener('mouseout',learnMoreHover)
 viewProjectsBtn.addEventListener('mouseover',viewProjectsHover)
 viewProjectsBtn.addEventListener('mouseout',viewProjectsHover)
-window.addEventListener('scroll', showVisible)
+window.addEventListener('scroll', showTopBtn)
+window.addEventListener('scroll', showContactText)
+window.addEventListener('scroll', showAboutMeCard)
+window.addEventListener('scroll', showMySkillsCard)
+window.addEventListener('scroll', showProjectOneCard)
+window.addEventListener('scroll', showProjectTwoCard)
+window.addEventListener('scroll', showProjectThreeCard)
+window.addEventListener('scroll', showProjectFourCard)
 
 for (i=0;i<projectCards.length;i++) {
   projectCards[i].addEventListener('click',clickCard)

@@ -95,7 +95,7 @@ h3 {
   background: linear-gradient(to right,#809BCE, #0094C6, #0EB1D2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight:700;
+  font-weight:600;
   transition:0.3s;
 }
 
@@ -355,21 +355,32 @@ height:80%;
      border:white 2px solid;
 }
 
-.about-me-card,.my-skills-card {
+.project1,.project2,.project3,.project4, .about-me-card,.my-skills-card {
   opacity:0;
-  background-size:cover;
-  background-repeat:no-repeat;
 }
-.about-me-card { 
+.project-name {
+  font-size:25px;
+}
+#project-name-1 {
+  font-family: 'Unica One', cursive;
+}
+#project-name-2 {
+  font-family: 'Pompiere', cursive;
+}
+#project-name-3 {
+  font-family: 'Carter One', cursive;
+}
+#project-name-4 {
+  font-family: 'Fredericka the Great', cursive;
+}
+.about-me-card {
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/about-me.jpg');
 }
 .my-skills-card {
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/my-skills.jpg');
 }
-
 .project1 {
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project1.png');
-
 }
 .project2 {
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project2.jpg');
@@ -381,9 +392,6 @@ height:80%;
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project4.jpg');
 }
 
-.project1,.project2,.project3,.project4 {
-  opacity:0;
-}
 .see-projects-text {
   color:white;
   text-align:center;
