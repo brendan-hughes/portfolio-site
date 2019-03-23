@@ -1,5 +1,5 @@
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin:0;
   background:black;
 }
@@ -128,7 +128,7 @@ h1.contact-header, h2.contact-header {
   border-radius:50px;
   color: white;
   background: transparent;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight:300;
   font-size:13pt;
   width:200px;
@@ -374,23 +374,33 @@ height:80%;
     padding: 0;
     list-style-type: none;
 }
-.view-project-btn {
+
+.project-btn-container {
+  display:inline;
+}
+.view-project-btn, .view-code-btn {
   width:105px;
-  margin:0 auto;
+  margin:20px 10px 0px;
+  padding:5px 2px;
   border:white 2px solid;
   background: transparent;
   color: white;
-  font-family: 'Raleway', sans-serif;
-  font-weight:300;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:400;
   font-size: 11pt;
   border-radius:10px;
   transition:0.2s;
   background:#0094C6;
 }
-.view-project-btn:hover {
+
+.view-code-btn {
+  background:#1B4965;
+}
+
+.view-project-btn:hover, .view-code-btn:hover{
   transform:scale(1.1)
 }
-.view-project-btn:focus {
+.view-project-btn:focus, .view-code-btn:focus {
   outline:none;
   box-shadow:5px 5px 8px rgba(255,255,255,0.25), -5px 5px 8px rgba(255,255,255,0.25), -5px -5px 8px rgba(255,255,255,0.25), 5px -5px 8px rgba(255,255,255,0.25);
 }
