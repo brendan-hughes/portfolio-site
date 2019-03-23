@@ -523,6 +523,6 @@ height:80%;
   }
   .project-skill-list {
     position:relative;
-    bottom:0;
+    bottom:0; 
   }
 }

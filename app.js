@@ -137,7 +137,7 @@ const showProjectThreeCard = function(ev) {
     window.removeEventListener('scroll', showProjectThreeCard)
   };
 }
-
+ 
 const showProjectFourCard = function(ev) {
   let distanceToProjectFour = projectFourCard.getBoundingClientRect().top;
   if (distanceToProjectFour <= 400) {
