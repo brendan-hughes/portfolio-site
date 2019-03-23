@@ -484,19 +484,19 @@ height:80%;
 
 @media only screen and (max-width: 750px) {
   .card {
-    height:80%;
+    height:275px;
     width:100%;
     margin-bottom:15px;
   }
   .projects-row {
     width:90%;
-    height:45%;
+    height:575px;
     display:flex;
     flex-direction:column;
     margin:0 auto;
   }
   #projects {
-    height:200%;
+    height:1280px;
   }
   .project-container {
     margin-bottom:95px;
@@ -508,12 +508,12 @@ height:80%;
   }
 
   h1.main-header {
-        font-size:25pt;
+    font-size:23pt;
   }
   h2.sub-header {
-        font-size:14.5pt;
+        font-size:13pt;
         position:relative;
-        right:77px;
+        right:65px;
   }
 
   #main-footer p {
@@ -523,13 +523,15 @@ height:80%;
   }
   .about-row{
     flex-direction:column;
+    height:590px;
+  }
+  #about-me-area {
+    height:590px;
   }
   #about-me, #my-skills {
     width:90%;
-    height:45%;
-  }
-  #about-me{
-    margin-bottom:-3px;
+    height:275px;
+    margin:auto;
   }
   .section-break-container {
     margin-bottom:-90px;
@@ -539,11 +541,11 @@ height:80%;
   }
   .view-project-btn, .view-code-btn {
     position:relative;
-    top:10px;
+    top:5px;
   }
   .project-skill-list {
     position:relative;
     bottom:0;
   }
-
+}
 }
