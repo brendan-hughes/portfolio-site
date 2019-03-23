@@ -143,13 +143,10 @@ h1.contact-header, h2.contact-header {
   text-align:center;
   padding:10px 0px;
 }
-#learn-more-btn:hover, #see-work-btn:hover {
+#learn-more-btn:hover, #see-work-btn:hover,#learn-more-btn:focus, #see-work-btn:focus  {
   background:#0094C6;
-  box-shadow:5px 5px 8px rgba(255,255,255,0.25), -5px 5px 8px rgba(255,255,255,0.25), -5px -5px 8px rgba(255,255,255,0.25), 5px -5px 8px rgba(255,255,255,0.25);
-}
-#learn-more-btn:focus, #see-work-btn:focus {
   outline:none;
-  box-shadow:5px 5px 8px rgba(255,255,255,0.25), -5px 5px 8px rgba(255,255,255,0.25), -5px -5px 8px rgba(255,255,255,0.25), 5px -5px 8px rgba(255,255,255,0.25);
+  box-shadow:5px 5px 15px rgba(255,255,255,0.25), -5px 5px 15px rgba(255,255,255,0.25), -5px -5px 15px rgba(255,255,255,0.25), 5px -5px 15px rgba(255,255,255,0.25);
 }
 
 .to-top-arrow{
@@ -246,6 +243,13 @@ h1.contact-header, h2.contact-header {
 
 .project-header {
   text-align:center;
+}
+.project-description {
+  width:90%;
+  margin: 0 auto;
+  font-size:13px;
+  position:relative;
+  bottom:10px;
 }
 
 .visible-project {
@@ -399,18 +403,21 @@ height:80%;
 }
 
 .project-skill-list-item {
-  display:inline;
+  display:inline-block;
   border-radius:10px;
   border:white solid 2px;
   background:#646464;
   padding:3px;
   transition:0.3s;
   font-size:9pt;
+  margin: 2px 0 0;
 }
 
 .project-skill-list {
     padding: 0;
     list-style-type: none;
+    width:80%;
+    margin: 0 auto;
 }
 
 .project-btn-container {
@@ -441,12 +448,12 @@ height:80%;
 }
 .view-project-btn:focus, .view-code-btn:focus {
   outline:none;
-  box-shadow:5px 5px 8px rgba(255,255,255,0.25), -5px 5px 8px rgba(255,255,255,0.25), -5px -5px 8px rgba(255,255,255,0.25), 5px -5px 8px rgba(255,255,255,0.25);
+  box-shadow:5px 5px 15px rgba(255,255,255,0.25), -5px 5px 15px rgba(255,255,255,0.25), -5px -5px 15px rgba(255,255,255,0.25), 5px -5px 15px rgba(255,255,255,0.25);
 }
 
 @media only screen and (max-width: 1050px) {
 .card {
-  height:197px;
+  height:210px;
   width:350px;
 }
 .section-break-container {
@@ -454,12 +461,25 @@ height:80%;
 }
 .view-project-btn, .view-code-btn {
   position:relative;
-  bottom:30px;
+  bottom:5px;
 }
 .project-skill-list {
   position:relative;
-  bottom:15px;
+  bottom:0px;
 }
+
+.project-description {
+  width:90%;
+  margin: 0 auto;
+  font-size:13px;
+  position:relative;
+  bottom:10px;
+}
+
+#view-project-btn-4, #view-code-btn-4, #view-project-btn-1, #view-code-btn-1{
+  bottom:18px;
+}
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -523,6 +543,7 @@ height:80%;
   }
   .project-skill-list {
     position:relative;
-    bottom:0; 
+    bottom:0;
   }
+
 }
