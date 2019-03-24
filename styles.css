@@ -581,12 +581,17 @@ height:80%;
     margin:0 auto;
   }
 
+  .section
+
   #projects {
     height:1280px;
   }
   .project-container {
     margin-bottom:95px;
     justify-content:center;
+    height:1150px;
+    position:relative;
+    bottom:95px;
   }
   .contact-text {
     position:relative;
@@ -622,12 +627,9 @@ height:80%;
     height:725px;
     margin-top:20px;
   }
-  .my-skills-row-container {
-    min-height:50%;
-  }
 
   .section-break-container {
-    margin-bottom:-90px;
+    margin-bottom:75px;
   }
   .row-2{
     margin-bottom:-125px;
@@ -651,6 +653,10 @@ height:80%;
     display:inline-block;
     padding:3px;
     max-width:100%;
+  }
+
+  .my-skills-subcontainer {
+    margin:0 auto auto;
   }
 
 }
