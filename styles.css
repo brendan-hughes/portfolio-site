@@ -505,7 +505,7 @@ height:80%;
 .view-project-btn, .view-code-btn {
   width:105px;
   margin:20px 10px 0px;
-  padding:5px 2px;
+  padding:5px 10px;
   border:white 2px solid;
   background: transparent;
   color: white;
@@ -515,6 +515,7 @@ height:80%;
   border-radius:10px;
   transition:0.2s;
   background:#0094C6;
+  display:inline-block;
 }
 
 .view-code-btn {
@@ -523,6 +524,7 @@ height:80%;
 
 .view-project-btn:hover, .view-code-btn:hover{
   transform:scale(1.1);
+
   cursor:pointer;
 }
 .view-project-btn:focus, .view-code-btn:focus {
