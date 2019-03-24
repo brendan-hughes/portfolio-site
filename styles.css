@@ -377,23 +377,94 @@ height:80%;
 #project-name-4 {
   font-family: 'Fredericka the Great', cursive;
 }
-.about-me-card {
-  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/about-me.jpg');
+.about-me-card, .my-skills-card{
+  justify-content:space-around;
+  border:none;
 }
-.my-skills-card {
-  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/my-skills.jpg');
+.about-me-card:hover, .my-skills-card:hover{
+  border:none;
+  box-shadow:none;
+}
+.about-me-icons-container {
+  display:flex;
+  flex-direction:row;
+  margin-bottom:10px;
+}
+.about-me-p {
+  width:90%;
+  margin:auto;
+}
+.about-me-header,.my-skills-header {
+  margin: 3px;
+  font-weight:600;
+}
+.about-me-icon-list {
+  list-style:none;
+  padding-left:0;
+  margin:auto;;
+}
+.about-me-icon-list-item {
+    display:inline-block;
+    margin:auto 15px;
+}
+.about-me-icon{
+  width:50px;
+  height:50px;
+  margin:auto;
+  transition:0.3s;
+}
+.about-me-icon:hover, .my-skills-list-item:hover {
+  transform:scale(1.2);
+}
+.my-skills-list-item:hover {
+    background:#00b8d6;
+}
+.my-skills-row-container {
+  display:flex;
+  margin:auto;
+  width:100%;
+
+}
+.my-skills-subcontainer {
+  width:45%;
+  margin:0 auto;
+}
+
+.my-skills-list-item {
+  list-style:none;
+  font-size:13px;
+  margin:5px;
+  transition:0.3s;
+  border:2px solid white;
+  border-radius:10px;
+  white-space: nowrap;
+  display:block;
+  padding:3px;
+}
+
+.my-skills-list{
+    padding-left:0;
+}
+
+.my-skills-subhead {
+  border:2px solid white;
+  background: rgba(255,255,255,0.4);
+  padding:3px;
+  border-radius:10px;
+  font-size:14px;
+  margin:auto;
 }
 .project1 {
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project1.png');
 }
 .project2 {
-  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project2.jpg');
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project2.png');
 }
 .project3 {
-  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project3.jpg');
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project3.png');
 }
 .project4 {
-  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project4.jpg');
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project4.png');
 }
 
 .see-projects-text {
@@ -406,11 +477,14 @@ height:80%;
   display:inline-block;
   border-radius:10px;
   border:white solid 2px;
-  background:#646464;
+  background:rgba(255,255,255,0.5);
   padding:3px;
   transition:0.3s;
   font-size:9pt;
   margin: 2px 0 0;
+}
+.project-skill-list-item:hover {
+  background:#646464;
 }
 
 .project-skill-list {
@@ -479,6 +553,11 @@ height:80%;
 #view-project-btn-4, #view-code-btn-4, #view-project-btn-1, #view-code-btn-1{
   bottom:18px;
 }
+.about-me-icon {
+  width:30px;
+  height:30px;
+  margin:auto;
+}
 
 }
 
@@ -488,6 +567,7 @@ height:80%;
     width:100%;
     margin-bottom:15px;
   }
+
   .projects-row {
     width:90%;
     height:575px;
@@ -495,6 +575,7 @@ height:80%;
     flex-direction:column;
     margin:0 auto;
   }
+
   #projects {
     height:1280px;
   }
@@ -523,16 +604,23 @@ height:80%;
   }
   .about-row{
     flex-direction:column;
-    height:590px;
+    height:850px;
   }
   #about-me-area {
-    height:590px;
+    height:850px;
   }
   #about-me, #my-skills {
     width:90%;
-    height:275px;
     margin:auto;
   }
+  #my-skills {
+    height:725px;
+    margin-top:20px;
+  }
+  .my-skills-row-container {
+    min-height:50%;
+  }
+
   .section-break-container {
     margin-bottom:-90px;
   }
@@ -547,5 +635,24 @@ height:80%;
     position:relative;
     bottom:0;
   }
+  .about-me-p {
+    font-size: 14px;
+  }
+  .about-me-icon {
+    width:28px;
+    height:28px;
+  }
+  .my-skills-list-item {
+    display:inline-block;
+    padding:3px;
+    max-width:100%;
+  }
+
 }
+}
+@media only screen and (max-width: 390px) {
+  .about-me-icon {
+    width:20px;
+    height:20px;
+  }
 }
