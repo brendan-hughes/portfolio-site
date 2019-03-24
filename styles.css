@@ -590,8 +590,8 @@ height:80%;
   }
 
   .project-container {
-    margin-bottom:170px;
-    justify-content:center;
+    margin-top:40px;
+    justify-content:flex-start;
     height:1150px;
   }
   .contact-text {
