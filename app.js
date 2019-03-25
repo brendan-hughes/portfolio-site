@@ -16,6 +16,8 @@ const aboutMeCard = document.querySelector('.about-me-card');
 const mySkillsCard = document.querySelector('.my-skills-card');
 const aboutMeDiv = document.getElementById('about-me-area');
 const projectsDiv = document.getElementById('projects');
+const body = document.body;
+
 
 
 
@@ -98,49 +100,72 @@ const showTopBtn = function (ev) {
     contactText.classList.remove('visible')
   }}
 
-const showAboutMeCard = function (ev) {
+const showAboutMeCard = function (ev) {const html = document.documentElement;
+
+const height = Math.max( body.scrollHeight, body.offsetHeight,
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
   let distanceToAboutMe = aboutMeCard.getBoundingClientRect().top;
-  if (distanceToAboutMe <= 400) {
+  if (distanceToAboutMe <= height/5) {
     aboutMeCard.classList.add('visible-project')
     window.removeEventListener('scroll', showAboutMeCard)
   };
 }
 
 const showMySkillsCard = function (ev) {
+  const html = document.documentElement;
+
+  const height = Math.max( body.scrollHeight, body.offsetHeight,
+                         html.clientHeight, html.scrollHeight, html.offsetHeight );
   let distanceToMySkills = mySkillsCard.getBoundingClientRect().top;
-  if (distanceToMySkills <= 400) {
+  if (distanceToMySkills <= height/5) {
     mySkillsCard.classList.add('visible-project')
     window.removeEventListener('scroll', showMySkillsCard)
   }
 }
 
 const showProjectOneCard = function (ev) {
+  const html = document.documentElement;
+
+  const height = Math.max( body.scrollHeight, body.offsetHeight,
+                         html.clientHeight, html.scrollHeight, html.offsetHeight );
   let distanceToProjectOne = projectOneCard.getBoundingClientRect().top;
-  if (distanceToProjectOne <= 400) {
+  if (distanceToProjectOne <= height/5) {
     projectOneCard.classList.add('visible-project')
     window.removeEventListener('scroll', showProjectOneCard)
   };
 }
 
 const showProjectTwoCard = function(ev) {
+  const html = document.documentElement;
+
+  const height = Math.max( body.scrollHeight, body.offsetHeight,
+                         html.clientHeight, html.scrollHeight, html.offsetHeight );
   let distanceToProjectTwo = projectTwoCard.getBoundingClientRect().top;
-  if (distanceToProjectTwo <= 400) {
+  if (distanceToProjectTwo <= height/5) {
     projectTwoCard.classList.add('visible-project')
     window.removeEventListener('scroll', showProjectTwoCard)
   };
 }
 
 const showProjectThreeCard = function(ev) {
+  const html = document.documentElement;
+
+  const height = Math.max( body.scrollHeight, body.offsetHeight,
+                         html.clientHeight, html.scrollHeight, html.offsetHeight );
   let distanceToProjectThree = projectThreeCard.getBoundingClientRect().top;
-  if (distanceToProjectThree <= 400) {
+  if (distanceToProjectThree <= height/5) {
     projectThreeCard.classList.add('visible-project')
     window.removeEventListener('scroll', showProjectThreeCard)
   };
 }
- 
+
 const showProjectFourCard = function(ev) {
+  const html = document.documentElement;
+
+  const height = Math.max( body.scrollHeight, body.offsetHeight,
+                         html.clientHeight, html.scrollHeight, html.offsetHeight );
   let distanceToProjectFour = projectFourCard.getBoundingClientRect().top;
-  if (distanceToProjectFour <= 400) {
+  if (distanceToProjectFour <= height/4) {
     projectFourCard.classList.add('visible-project')
     window.removeEventListener('scroll', projectFourCard)
   };

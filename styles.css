@@ -16,6 +16,14 @@ h1.main-header, h2.sub-header {
     color:white;
     font-weight:300;
     margin:10px;
+    text-align:center;
+}
+
+.title-text span {
+  width:275px;
+  text-align:left;
+  margin: 0;
+
 }
 
 /*Vertical Sliding*/
@@ -103,9 +111,9 @@ h1.main-header {
       font-size:32pt;
 }
 h2.sub-header {
-      font-size:30px;
-      position:relative;
-      right:115px;
+    font-size:30px;
+    position: relative;
+    right: 100;
 }
 
 h1.contact-header, h2.contact-header {
@@ -316,6 +324,7 @@ height:80%;
 
 .home-row {
   height:100%;
+  width:100%;
   text-align:center;
   vertical-align:middle;
   display:flex;
@@ -568,6 +577,7 @@ height:80%;
 
 }
 
+
 @media only screen and (max-width: 750px) {
   .card {
     height:275px;
@@ -607,7 +617,8 @@ height:80%;
   h2.sub-header {
         font-size:13pt;
         position:relative;
-        right:65px;
+        right:60;
+        left:auto;
   }
 
   #main-footer p {
@@ -663,12 +674,34 @@ height:80%;
   .my-skills-subcontainer {
     margin:0 auto auto;
   }
-
+  #about-me, #my-skills {
+  height:450px;
+  }
+  .about-row {
+    height:800px;
+  }
 }
-}
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 570px) {
   .about-me-icon {
     width:20px;
     height:20px;
+  }
+  h1.main-header {
+    font-size:22px;
+  }
+  h2.sub-header {
+    font-size:14px;
+
+    width:100%;
+  }
+  .view-project-btn, .view-code-btn {
+    padding: 5px 5px;
+    margin:auto 10px 0;
+  }
+  .my-skills-list-item {
+    font-size:10px;
+  }
+  .my-skills-subhead {
+    font-size:12px;
   }
 }
