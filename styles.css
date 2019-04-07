@@ -187,6 +187,11 @@ h1.contact-header, h2.contact-header {
     cursor:default;
 }
 
+.my-skills-subhead:hover {
+  box-shadow:5px 5px 15px rgba(255,255,255,0.25), -5px 5px 15px rgba(255,255,255,0.25), -5px -5px 15px rgba(255,255,255,0.25), 5px -5px 15px rgba(255,255,255,0.25);
+
+}
+
 .visible {
   visibility:visible;
   opacity:1;
@@ -466,6 +471,7 @@ height:80%;
   border-radius:10px;
   font-size:14px;
   margin:auto;
+  transition:0.3s;
 }
 .project1 {
   background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('images/project1.png');
